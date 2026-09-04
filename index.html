@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>PAN studios</title>
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" type="image/png" href="PAN.png">
 
     <style>
         * {
@@ -25,11 +29,11 @@
             left: 0;
             width: 100%;
             height: 75px;
-            background: white;
+            background: #000;
             display: flex;
             align-items: center;
             padding: 10px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             z-index: 100;
         }
 
@@ -39,11 +43,11 @@
             object-fit: contain;
         }
 
-        .games-button {
+        .nav-button {
             margin-left: 15px;
             padding: 12px 22px;
-            background: #222;
-            color: white;
+            background: #fff;
+            color: #000;
             text-decoration: none;
             border-radius: 8px;
             font-size: 16px;
@@ -51,8 +55,8 @@
             transition: 0.2s;
         }
 
-        .games-button:hover {
-            background: #444;
+        .nav-button:hover {
+            background: #ddd;
             transform: translateY(-2px);
         }
 
@@ -82,7 +86,7 @@
             margin-bottom: 35px;
         }
 
-        /* Botones */
+        /* Botones principales */
         .buttons {
             display: flex;
             justify-content: center;
@@ -113,7 +117,7 @@
             border-radius: 12px;
             padding: 25px;
             min-height: 120px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
             font-size: 18px;
             line-height: 1.7;
         }
@@ -144,6 +148,11 @@
             .logo {
                 height: 45px;
             }
+
+            .nav-button {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -152,15 +161,24 @@
 
     <!-- Barra superior -->
     <nav class="navbar">
+
         <img src="PAN.png" alt="PAN Studios" class="logo">
 
         <a
             href="https://itch.io/c/8095906/pan-studios-free-colection"
-            class="games-button"
+            class="nav-button"
             target="_blank"
         >
             Juegos
         </a>
+
+        <a
+            href="https://www.gameblocks.panstudios.es"
+            class="nav-button"
+        >
+            Game Blocks
+        </a>
+
     </nav>
 
     <!-- Página principal -->
@@ -174,6 +192,7 @@
             </div>
 
             <div class="buttons">
+
                 <button class="tab-button" onclick="showIntroduction()">
                     Introduccion
                 </button>
@@ -185,6 +204,7 @@
                 <button class="tab-button" onclick="goDiscord()">
                     Discord
                 </button>
+
             </div>
 
             <div id="content">
